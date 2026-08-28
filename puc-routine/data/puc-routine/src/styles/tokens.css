@@ -1,0 +1,34 @@
+/* Sistema de design do PUC Routine.
+   Derivado da identidade visual da PUC-Rio: fundo bone quente, tinta preta,
+   brasao monocromatico, muito respiro, linhas finas. O azul institucional
+   aparece so como destaque de dado. */
+:root {
+  /* superficies */
+  --bg:        #F4F3EE;
+  --surface:   #FFFFFF;
+  --surface-2: #EAE8E0;
+
+  /* tinta */
+  --ink:  #16150F;
+  --mut:  #5E5C52;
+  --dim:  #96938A;
+  --rule: #D9D6CC;
+
+  /* semanticas — separadas do destaque institucional */
+  --blue:  #1B3E6F;  --blue-soft:  #E4E9F1;
+  --ok:    #2C6B4F;  --ok-soft:    #E2EDE6;
+  --warn:  #9A6410;  --warn-soft:  #F3EADB;
+  --crit:  #9E3324;  --crit-soft:  #F5E4E1;
+
+  /* tipografia */
+  --font-display: Archivo, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* escala de espaco */
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px;
+  --s5: 24px; --s6: 32px; --s7: 48px; --s8: 72px; --s9: 112px;
+
+  --radius: 4px;
+  --maxw: 1140px;
+}

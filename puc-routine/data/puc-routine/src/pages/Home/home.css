@@ -1,0 +1,53 @@
+/* hero */
+.hero { padding: var(--s9) 0 var(--s8); max-width: 60rem; }
+.hero__eyebrow { display: block; margin-bottom: var(--s6); }
+.hero__tag {
+  font-size: clamp(26px, 3.6vw, 40px); font-weight: 600;
+  margin: var(--s6) 0 var(--s4); max-width: 18ch;
+}
+.hero__lede { color: var(--mut); font-size: 17px; max-width: 60ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s6); }
+
+/* dimensoes */
+.dims { padding-top: var(--s7); }
+.dims__head { border-top: 1px solid var(--rule); padding-top: var(--s5); margin-bottom: var(--s6);
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--s6); align-items: start; }
+.dims__t { font-size: clamp(24px, 2.8vw, 34px); font-weight: 700; }
+.dims__p { color: var(--mut); font-size: 15.5px; }
+
+.dims__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); }
+.dim {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: var(--s4); display: flex; flex-direction: column; gap: var(--s2); position: relative;
+}
+.dim--core { border-color: var(--ink); border-width: 1.5px; }
+.dim__top { display: flex; align-items: center; justify-content: space-between; }
+.dim__icon { font-size: 20px; }
+.dim__case { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--dim); }
+.dim__label { font-size: 19px; font-weight: 700; }
+.dim__q { font-size: 14.5px; font-weight: 500; color: var(--ink); }
+.dim__d { font-size: 13.5px; color: var(--mut); line-height: 1.5; }
+.dim__flag {
+  position: absolute; top: -9px; left: var(--s4);
+  background: var(--ink); color: var(--bg); font-family: var(--font-mono);
+  font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 2px;
+}
+
+/* tese */
+.thesis { padding-top: var(--s8); max-width: 54rem; }
+.thesis__rule { height: 2px; background: var(--ink); width: 64px; margin-bottom: var(--s5); }
+.thesis__t { font-family: var(--font-display); font-size: clamp(20px, 2.3vw, 27px);
+  font-weight: 600; letter-spacing: -.02em; line-height: 1.28; margin-bottom: var(--s4); }
+.thesis__t strong { font-weight: 800; }
+.thesis__p { color: var(--mut); font-size: 15.5px; max-width: 62ch; }
+
+@media (max-width: 900px) {
+  .dims__head { grid-template-columns: 1fr; gap: var(--s4); }
+  .dims__grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding-top: var(--s7); }
+}
+@media (max-width: 520px) {
+  .dims__grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+*.log
+
+# ---------------------------------------------------------------
+# DADOS: nao publicar. USO-DOS-DADOS.md do Impact Lab restringe o
+# uso ao workshop e proibe redistribuicao. data/README.md explica
+# quais arquivos colocar em data/raw/ e com que estrutura.
+# ---------------------------------------------------------------
+data/raw/**
+data/processed/**
+!data/README.md
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# a apresentacao com dados agregados pode ser publicada
+!docs/presentation/**
+
+__pycache__/
+*.pyc

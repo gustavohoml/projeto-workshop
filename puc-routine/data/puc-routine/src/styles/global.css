@@ -1,0 +1,54 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -0.025em; line-height: 1.08; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 2px; }
+
+.shell { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s5); }
+
+.mono { font-family: var(--font-mono); }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--mut);
+}
+
+/* botoes */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--s2);
+  padding: 13px 22px; border-radius: var(--radius); cursor: pointer;
+  font-weight: 500; font-size: 15px; text-decoration: none;
+  border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.btn:hover { background: #000; border-color: #000; }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+.btn--ghost:hover { background: var(--surface); border-color: var(--ink); }
+
+/* etiquetas de procedencia do numero — usadas em todo o produto */
+.tagdata {
+  display: inline-block; font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: .1em; text-transform: uppercase; font-weight: 600;
+  padding: 2px 7px; border-radius: 3px; white-space: nowrap;
+}
+.tagdata--observado  { background: var(--blue-soft); color: var(--blue); }
+.tagdata--calculado  { background: var(--ok-soft);   color: var(--ok); }
+.tagdata--estimativa { background: var(--warn-soft); color: var(--warn); }
+.tagdata--regra      { background: var(--surface-2); color: var(--mut); }
+.tagdata--suposicao  { background: var(--crit-soft); color: var(--crit); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
